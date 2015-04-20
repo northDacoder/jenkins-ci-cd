@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Application-Title: CIExample
+Version: 1.0
+Some-Other-Junk: Look how cool we are
+

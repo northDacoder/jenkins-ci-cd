@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="localhost.localdomain" name="com.devjam.training.cicourse.model.ItemTest" tests="1" time="0.003" timestamp="2015-04-18T14:41:12">
+  <properties />
+  <testcase classname="com.devjam.training.cicourse.model.ItemTest" name="negativePricesThrowException" time="0.001" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

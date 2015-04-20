@@ -1,0 +1,4 @@
+println 'This is executed during the initialization phase. Optional for single project builds, required for multiple projects'
+
+include 'model', 'engine', 'services'
+

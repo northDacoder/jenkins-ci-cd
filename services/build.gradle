@@ -1,0 +1,49 @@
+apply plugin: 'java'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'javax.xml.ws:jaxws-api:2.2.6', 'javax.ws.rs:javax.ws.rs-api:2.0.1'
+	testCompile 'junit:junit-dep:4.7', 'com.restfuse:com.eclipsesource.restfuse:1.0.0'
+}
+
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+	manifest {
+		attributes 'Application-Title' : 'CIExample', 'Version': version, 'Some-Other-Junk' : 'Look how cool we are'
+	}
+}
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
+
+task upper << {
+    String someString = 'mY_nAmE'
+    println "Original: " + someString 
+    println "Upper case: " + someString.toUpperCase()
+}
+
+println 'This is executed during the configuration phase.'
+
+task configured {
+    println 'This is also executed during the configuration phase.'
+}
+
+task sometest << {
+    println 'This is executed during the execution phase.'
+}
+
+task testBoth {
+    doFirst {
+      println 'This is executed first during the execution phase.'
+    }
+    doLast {
+      println 'This is executed last during the execution phase.'
+    }
+    println 'This is executed during the configuration phase as well.'
+}
